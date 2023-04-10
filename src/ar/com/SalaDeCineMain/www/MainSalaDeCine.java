@@ -1,4 +1,10 @@
+package ar.com.SalaDeCineMain.www;
 import java.util.Scanner;
+
+import ar.com.SalaDeCine.www.Persona;
+import ar.com.SalaDeCine.www.SalaDeCine;
+
+
 
 public class MainSalaDeCine {
 

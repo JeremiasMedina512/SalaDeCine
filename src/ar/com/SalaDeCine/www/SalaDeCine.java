@@ -1,3 +1,4 @@
+package ar.com.SalaDeCine.www;
 public class SalaDeCine {
 	private final int asientosMaximoEnHorizontal = 5;
 	private final int asientosMaximosEnVertical = 5;

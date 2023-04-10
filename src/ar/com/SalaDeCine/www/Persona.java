@@ -1,3 +1,4 @@
+package ar.com.SalaDeCine.www;
 
 public class Persona {
 	private String nombre;
