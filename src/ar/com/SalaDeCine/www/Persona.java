@@ -2,11 +2,10 @@ package ar.com.SalaDeCine.www;
 
 public class Persona {
 	private String nombre;
-	
+
 	public Persona(String nombre) {
 		this.nombre = nombre;
 	}
-	
 
 	/**
 	 * @return the nombre
@@ -26,6 +25,5 @@ public class Persona {
 	public String toString() {
 		return "Persona [nombre=" + nombre + "]";
 	}
-	
-	
+
 }

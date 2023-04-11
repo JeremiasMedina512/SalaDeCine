@@ -1,10 +1,9 @@
 package ar.com.SalaDeCineMain.www;
+
 import java.util.Scanner;
 
 import ar.com.SalaDeCine.www.Persona;
 import ar.com.SalaDeCine.www.SalaDeCine;
-
-
 
 public class MainSalaDeCine {
 
@@ -13,9 +12,9 @@ public class MainSalaDeCine {
 
 		Scanner ingresoTecla = new Scanner(System.in);
 		int opciones = 0;
-		
+
 		SalaDeCine cinemax = new SalaDeCine();
-		
+
 		do {
 			menu();
 			opciones = ingresoTecla.nextInt();
@@ -39,7 +38,8 @@ public class MainSalaDeCine {
 
 	private static void consultarCantidadDeAseintosOcupados(SalaDeCine cinemax) {
 		// TODO Auto-generated method stub
-		System.out.println("La cantidad de butacas ocupadas hasta ahora son: "+ cinemax.consultarCantidadDeButacasOcupadas());
+		System.out.println(
+				"La cantidad de butacas ocupadas hasta ahora son: " + cinemax.consultarCantidadDeButacasOcupadas());
 	}
 
 	private static void seccionParaReservarButaca(SalaDeCine cinemax, Scanner ingresoTecla) {
@@ -48,7 +48,7 @@ public class MainSalaDeCine {
 		int filaCalumna = 0;
 		Persona persona = null;
 		String nombre = " ";
-		
+
 		System.out.println("Ingrese los el numero de fila y asiento a reservar:");
 		System.out.println("Numero de fila: ");
 		filaRenglon = ingresoTecla.nextInt();
@@ -56,15 +56,13 @@ public class MainSalaDeCine {
 		filaCalumna = ingresoTecla.nextInt();
 		System.out.println("Ingrese el nombre de la persona");
 		nombre = ingresoTecla.next();
-		persona = new Persona (nombre);
+		persona = new Persona(nombre);
 		if (cinemax.ocuparButaca(filaRenglon, filaCalumna, persona)) {
 			System.out.println("Asiento reservado");
 		} else {
 			System.out.println("No se puede reservar porque ya fue ocupado");
 		}
-		
-		
-		
+
 	}
 
 	private static void consultarSiLaButacaSeEncuentraCopada(SalaDeCine cinemax, Scanner ingresoTecla) {
@@ -72,22 +70,21 @@ public class MainSalaDeCine {
 		int filaRenglon = 0;
 		int filaCalumna = 0;
 
-		System.out.println("Ingrese:");
-		System.out.println("Numero de fila: ");
+		System.out.println("Ingrese numero de fila");
 		filaRenglon = ingresoTecla.nextInt();
 		System.out.println("Numero de columa");
 		filaCalumna = ingresoTecla.nextInt();
 		if (cinemax.elAsientoSeEncuenTraOcupado(filaRenglon, filaCalumna) == true) {
-			System.out.println("El asiento se encuentra LIBRE");
-		} else {
 			System.out.println("El asiento se encuentra OCUPADO");
+		} else {
+			System.out.println("El asiento se encuentra LIBRE");
 		}
 	}
 
 	private static void salaDeCineVacia(SalaDeCine cinemax) {
 		// TODO Auto-generated method stub
 		if (cinemax.laSalaSeEncuentraVacia() == true) {
-			System.out.println("La encuentra se encuentra vacia");
+			System.out.println("La sala se encuentra vacia");
 		} else {
 			System.out.println("La sala no se encuentra vacia");
 		}
